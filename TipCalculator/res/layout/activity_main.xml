@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+    <EditText
+        android:id="@+id/totalBill"
+        android:inputType="numberDecimal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/fixedText"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:text="Tip is : " />
+
+    <EditText
+        android:id="@+id/displayTipAmount"
+        android:inputType="text" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fixedText"
+        android:layout_alignBottom="@+id/fixedText"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        />
+
+    <Button
+        android:id="@+id/calculateTwenty"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/calculateFifteen"
+        android:layout_alignBottom="@+id/calculateFifteen"
+        android:layout_alignRight="@+id/totalBill"
+        android:onClick="calculateTwenty"
+        android:text="20%" />
+
+    <Button
+        android:id="@+id/calculateFifteen"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalBill"
+        android:layout_centerHorizontal="true"
+        android:onClick="calculateFifteen"
+        android:text="15%" />
+
+    <Button
+        android:id="@+id/calculateTen"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalBill"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/calculateFifteen"
+        android:onClick="calculateTen"
+        android:text="10%" />
+    
+</RelativeLayout>
